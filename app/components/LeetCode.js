@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import { personal } from "../../lib/data";
+import { Check, ChartNoAxesCombined, Star, Zap } from 'lucide-react'
 
 function AnimatedNumber({ target, visible, suffix = "" }) {
   const [val, setVal] = useState(0);

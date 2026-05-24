@@ -30,6 +30,27 @@ const SOCIAL_LINKS = [
       </svg>
     ),
   },
+  {
+    label: "SwapCircle",
+    href: personal.swapCircle,
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-link-icon lucide-link"
+      >
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+      </svg>
+    ),
+  },
 ];
 
 export default function Hero() {
@@ -76,18 +97,17 @@ export default function Hero() {
         }}
       /> */}
 
-
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-24 pb-16 flex flex-col lg:flex-row items-center gap-16">
         {/* Left — Text */}
         <div className="flex-1 text-center lg:text-left">
           {/* Status badge */}
-          <div
+          {/* <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(99,102,241,0.3)] bg-[rgba(99,102,241,0.08)] mb-8 text-sm text-[var(--accent-soft)]"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             Available for opportunities
-          </div>
+          </div> */}
 
           {/* Name */}
           <h1
@@ -95,7 +115,8 @@ export default function Hero() {
             style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}
           >
             <span className="text-[var(--text)]">Abdul </span>
-            <span className="gradient-text">Suban</span>
+            <span className="gradient-text">Suban</span> <br />
+            {/* <span className="text-[var(--text)]">Mohd Ismail Shaikh</span> */}
           </h1>
 
           {/* Typewriter role */}
@@ -241,7 +262,7 @@ export default function Hero() {
             },
           ].map((item, index, arr) => {
             const angle = (360 / arr.length) * index;
-            const radius = 120;
+            const radius = 180;
 
             return (
               <div
@@ -262,7 +283,7 @@ export default function Hero() {
                   }}
                 >
                   <div
-                    className="absolute w-11 h-11 rounded-full flex items-center justify-center text-[10px] font-semibold border backdrop-blur-sm"
+                    className="absolute w-20 h-20 rounded-full flex items-center justify-center text-[15px] font-semibold border backdrop-blur-sm"
                     style={{
                       top: "-22px",
                       left: "50%",

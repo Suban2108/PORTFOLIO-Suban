@@ -79,7 +79,7 @@ export default function Skills() {
   const filtered = active === "All" ? skills : skills.filter((s) => s.category === active);
 
   return (
-    <section id="skills" className="py-10 max-w-7xl mx-auto px-6" ref={ref}>
+    <section id="skills" className="max-w-7xl mx-auto px-6" ref={ref}>
       {/* Heading */}
       <div className="mb-12">
         <h2 className="text-3xl lg:text-4xl font-bold text-[var(--text)]" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700 }}>

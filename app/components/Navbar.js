@@ -58,7 +58,7 @@ export default function Navbar() {
           className="font-display font-bold text-lg gradient-text tracking-tight"
           style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700 }}
         >
-          AS<span className="text-[var(--accent-2)]">.</span>
+          Abdul Suban
         </a>
 
         <div className="hidden md:flex items-center gap-1">
