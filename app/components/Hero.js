@@ -283,7 +283,7 @@ export default function Hero() {
                   }}
                 >
                   <div
-                    className="absolute w-20 h-20 rounded-full flex items-center justify-center text-[15px] font-semibold border backdrop-blur-sm"
+                    className="absolute w-[70px] h-[70px] rounded-full flex items-center justify-center text-[12px] font-semibold border backdrop-blur-sm"
                     style={{
                       top: "-22px",
                       left: "50%",
