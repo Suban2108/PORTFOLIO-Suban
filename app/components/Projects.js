@@ -1,53 +1,21 @@
 "use client";
 import { useState } from "react";
 import { projects } from "../../lib/data";
+import {
+  Sprout,
+  ArrowLeftRight,
+  HeartPulse,
+  UtensilsCrossed,
+  ShoppingBag,
+  ShieldUser,
+} from "lucide-react";
 
 const ICON_MAP = {
-  Sprout: () => (
-    <svg
-      className="w-6 h-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M12 19V6m0 0C12 6 9 3 5 3c0 4 2 7 5 8m2-8c0 0 3-3 7-3 0 4-2 7-5 8"
-      />
-    </svg>
-  ),
-  ArrowLeftRight: () => (
-    <svg
-      className="w-6 h-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
-      />
-    </svg>
-  ),
-  HeartPulse: () => (
-    <svg
-      className="w-6 h-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-      />
-    </svg>
-  ),
+  Sprout,
+  ArrowLeftRight,
+  HeartPulse,
+  UtensilsCrossed,
+  ShoppingBag,
 };
 
 function ProjectModal({ project, onClose }) {
@@ -184,8 +152,8 @@ function ProjectModal({ project, onClose }) {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -198,6 +166,37 @@ function ProjectModal({ project, onClose }) {
                   <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
                 </svg>
                 Live
+              </a>
+            )}
+            {project.admin_live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-[var(--text-muted)] hover:text-[var(--text)] transition-all"
+                style={{
+                  background: "var(--bg)",
+                  border: "1px solid var(--border)",
+                  fontFamily: "'DM Sans', sans-serif",
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shield-user-icon lucide-shield-user"
+                >
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                  <path d="M6.376 18.91a6 6 0 0 1 11.249.003" />
+                  <circle cx="12" cy="11" r="4" />
+                </svg>
+                Admin
               </a>
             )}
           </div>
